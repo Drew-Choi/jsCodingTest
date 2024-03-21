@@ -1,4 +1,4 @@
-const stone = [1, 2, 1, 4];
+const stone = [5, 3, 4, 1, 3, 8, 3];
 const friends = JSON.stringify([
   {
     이름: "루비독",
@@ -34,7 +34,7 @@ const survivor = (stone, friends) => {
   for (let friend of parseFriends) {
     let position = 0;
     let survival = true;
-    while (position > copyStone.length) {
+    while (position < copyStone.length) {
       position += parseInt(friend.점프력, 10);
       copyStone[position - 1] -= parseInt(friend.몸무게, 10);
 
