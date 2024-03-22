@@ -1,12 +1,12 @@
 let number = "1231233";
 
-const factorial = (number) => {
+const recursion = (number) => {
   if (number.length === 1) return parseInt(number, 10);
 
   return (
-    factorial(number.slice(0, number.length - 1)) +
+    recursion(number.slice(0, number.length - 1)) +
     parseInt(number[number.length - 1], 10)
   );
 };
 
-console.log(factorial(number));
+console.log(recursion(number));

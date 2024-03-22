@@ -26,10 +26,10 @@ while (true) {
 
 //재귀표현
 
-const factorial = (n) => {
+const recursion = (n) => {
   if (n === 1 || n === 0) return String(n);
 
-  return factorial(Math.floor(n / 2)) + String(n % 2);
+  return recursion(Math.floor(n / 2)) + String(n % 2);
 };
 
-console.log("2222:", factorial(11));
+console.log("2222:", recursion(11));

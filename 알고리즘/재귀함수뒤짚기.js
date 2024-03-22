@@ -15,12 +15,12 @@ while (true) {
 }
 
 // 재귀
-const factorial = (string) => {
+const recursion = (string) => {
   if (string.length === 1) return string;
 
   return (
-    string[string.length - 1] + factorial(string.slice(0, string.length - 1))
+    string[string.length - 1] + recursion(string.slice(0, string.length - 1))
   );
 };
 
-console.log(factorial("drewchoi"));
+console.log(recursion("drewchoi"));

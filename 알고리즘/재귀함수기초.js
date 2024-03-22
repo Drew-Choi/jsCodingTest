@@ -11,9 +11,9 @@ console.log(s);
 console.log((n * (n + 1)) / 2);
 // O(1)
 
-const factorial = (n) => {
+const recursion = (n) => {
   if (n <= 1) return 1;
 
-  return n * factorial(n - 1);
+  return n * recursion(n - 1);
 };
-console.log("재귀", factorial(5));
+console.log("재귀", recursion(5));
