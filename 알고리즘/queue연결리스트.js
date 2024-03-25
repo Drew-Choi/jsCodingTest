@@ -27,16 +27,3 @@ class Queue {
     return this.tailIndex - this.headIndex;
   }
 }
-
-const queue = new Queue();
-queue.enqueue(5);
-const a = queue.dequeue();
-queue.dequeue();
-queue.dequeue();
-queue.enqueue(1);
-queue.dequeue();
-queue.dequeue();
-queue.enqueue(3);
-
-console.log(queue.items);
-console.log(a);
