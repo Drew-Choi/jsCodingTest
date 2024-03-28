@@ -1,38 +1,25 @@
 const n = 3;
 
-let stack = [
-  { index: 0, depth: 0, visited: Array(n).fill(false), selected: [] },
-];
+let history = [];
+let stack = [];
 
-let answer = "";
+for (let i = n; i > 0; i -= 1) {
+  stack.push({ i, d: 1 });
 
-while (stack.length > 0) {
-  let { index, depth, visited, selected } = stack.pop();
+  if (stack.length !== 0) {
+    const pop = stack.pop();
 
-  console.log(stack);
-
-  for (let i = index; i < n; i += 1) {
-    if (!visited[i]) {
-      let newVisited = [...visited];
-      newVisited[i] = true;
-
-      let newSelected = [...selected, i];
-
-      if (newSelected.length === n) {
-        for (let select of newSelected) {
-          answer += select + 1 + " ";
-        }
-        answer += "\n";
-      } else {
-        stack.push({
-          index: i + 1,
-          depth: depth + 1,
-          visited: newVisited,
-          selected: newSelected,
-        });
-      }
-    }
+    history.push(pop);
   }
 }
 
-console.log(answer);
+/*  
+                0
+         1            2            3         
+       2    3       1   3       1    2
+     3        2    3     1    2        1
+
+[{i: 1 d: 1}, {i: 2 d: 1}, {i: 3 d: 1}]
+
+
+*/
