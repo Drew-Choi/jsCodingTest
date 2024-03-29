@@ -1,25 +1,29 @@
 const n = 3;
 
-let history = [];
-let stack = [];
+// const solution = (num) => {
+//   const nums = Array.from(Array(num), (_, index) => index + 1);
 
-for (let i = n; i > 0; i -= 1) {
-  stack.push({ i, d: 1 });
+//   const stack = [[nums, []]];
 
-  if (stack.length !== 0) {
-    const pop = stack.pop();
+//   const result = [];
 
-    history.push(pop);
-  }
-}
+//   while (stack.length > 0) {
+//     const [nums, path] = stack.pop();
 
-/*  
-                0
-         1            2            3         
-       2    3       1   3       1    2
-     3        2    3     1    2        1
+//     if (path.length === nums.length) {
+//       console.log("?", stack);
+//       result.push(path);
+//     } else {
+//       for (const el of nums) {
+//         if (!path.includes(el)) {
+//           console.log("s", stack);
+//           stack.push([nums, path.concat(el)]);
+//         }
+//       }
+//     }
+//   }
 
-[{i: 1 d: 1}, {i: 2 d: 1}, {i: 3 d: 1}]
+//   return result.map((arr) => arr.join(" ")).join("\n");
+// };
 
-
-*/
+// console.log(solution(n));

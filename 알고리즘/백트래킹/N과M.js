@@ -1,4 +1,4 @@
-let n = 100000000;
+let n = 3;
 let m = 2;
 
 let arr = [];
