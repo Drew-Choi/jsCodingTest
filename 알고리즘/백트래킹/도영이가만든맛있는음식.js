@@ -42,3 +42,17 @@ const dfs = (depth, start) => {
 dfs(0, 0);
 
 console.log(answer);
+
+/*
+
+1. s = [0] , v = [true, false]
+   x = 1, y = 7 
+   a = 6
+
+   - 
+   s = [0, 1], v = [true, true]
+   x = 2, y = 13
+   a = 6
+
+2.    
+*/
