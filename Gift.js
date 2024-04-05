@@ -11,11 +11,7 @@ const gifts = [
 ];
 
 const solution = (friends, gifts) => {
-  const arr = friends.reduce((acc, cur) => {
-    if (!acc[cur]) {
-      acc;
-    }
-  }, {});
+  const arr = friends.reduce((acc, cur) => {}, {});
 
   console.log(arr);
 };
