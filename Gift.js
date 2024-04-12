@@ -29,6 +29,8 @@ const solution = (friends, gifts) => {
 
     return acc;
   }, {});
+
+  console.log(Object.entries(arr));
 };
 
 solution(friends, gifts);
